@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shiny Garage | حماية وعناية السيارات في المنصورة – PPF</title>
+  <meta name="description" content="Shiny Garage – مركز حماية وعناية بالسيارات في المنصورة. أفلام حماية PPF، عزل حراري، Glass Guard، وCar Care. فرعين: توريل وحي الجامعة. موقعنا الجديد قريبًا.">
+  <link rel="canonical" href="https://shinygarageppf.com/">
+  <meta name="theme-color" content="#050505">
+  <link rel="icon" href="assets/logo.jpg">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Shiny Garage">
+  <meta property="og:title" content="Shiny Garage | حماية وعناية السيارات في المنصورة">
+  <meta property="og:description" content="أفلام حماية PPF، عزل حراري، Glass Guard، وCar Care. موقعنا الجديد قريبًا.">
+  <meta property="og:url" content="https://shinygarageppf.com/">
+  <meta property="og:image" content="https://shinygarageppf.com/assets/og-image.webp">
+  <meta property="og:locale" content="ar_EG">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://shinygarageppf.com/#org",
+        "name": "Shiny Garage",
+        "url": "https://shinygarageppf.com/",
+        "logo": "https://shinygarageppf.com/assets/logo.jpg",
+        "email": "shinygarageeg@gmail.com",
+        "sameAs": [
+          "https://www.facebook.com/shinygarage1",
+          "https://www.instagram.com/shinygarage1/"
+        ]
+      },
+      {
+        "@type": "AutoRepair",
+        "name": "Shiny Garage – فرع توريل",
+        "parentOrganization": { "@id": "https://shinygarageppf.com/#org" },
+        "url": "https://shinygarageppf.com/",
+        "image": "https://shinygarageppf.com/assets/logo.jpg",
+        "telephone": "+201000085431",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "شارع سعد زغلول، برج الحرمين، توريل",
+          "addressLocality": "المنصورة",
+          "addressRegion": "الدقهلية",
+          "addressCountry": "EG"
+        },
+        "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJh912GQCd9xQRwB3FKimALsA"
+      },
+      {
+        "@type": "AutoRepair",
+        "name": "Shiny Garage – فرع حي الجامعة",
+        "parentOrganization": { "@id": "https://shinygarageppf.com/#org" },
+        "url": "https://shinygarageppf.com/",
+        "image": "https://shinygarageppf.com/assets/logo.jpg",
+        "telephone": "+201103248800",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "45 شارع الخليفة المأمون، متفرع من أحمد ماهر، حي الجامعة",
+          "addressLocality": "المنصورة",
+          "addressRegion": "الدقهلية",
+          "addressCountry": "EG"
+        },
+        "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJGdU-d5Gd9xQRnKw5fYZSwGc"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=Lalezar&family=Saira:ital,wght@1,600;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    /* Tokens, taken straight from the logo */
+    :root {
+      --black: #050505;      /* garage floor */
+      --asphalt: #121212;    /* panels */
+      --red: #e31e24;        /* logo red stripe */
+      --gray: #8c8c8c;       /* logo gray stripe */
+      --chalk: #f4f4f4;      /* logo lettering */
+      --dim: #9b9b9b;
+      --skew: -14deg;        /* the logo's stripe angle */
+      --display-ar: "Lalezar", "IBM Plex Sans Arabic", sans-serif;
+      --body: "IBM Plex Sans Arabic", system-ui, sans-serif;
+      --race: "Saira", "Arial Narrow", sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { background: var(--black); color: var(--chalk); scroll-behavior: smooth; }
+    body { font-family: var(--body); overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible { outline: 2px solid var(--chalk); outline-offset: 4px; }
+    .ico { width: 20px; height: 20px; flex: none; }
+    .row { display: flex; align-items: center; gap: 10px; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+    /* ---------- Signature: the logo's slanted stripes become the buttons ---------- */
+    .stripe {
+      position: relative; display: inline-flex; align-items: center;
+      padding: 14px 30px; transform: skewX(var(--skew));
+      font-weight: 700; font-size: 16px; line-height: 1.25;
+      transition: transform .25s ease, box-shadow .25s ease, filter .25s ease, border-color .25s ease;
+    }
+    .stripe > * { transform: skewX(calc(var(--skew) * -1)); }
+    .stripe:hover { transform: skewX(var(--skew)) translateY(-3px); filter: brightness(1.1); }
+    .stripe--red  { background: var(--red); color: #fff; box-shadow: 0 12px 40px -10px rgba(227,30,36,.8); }
+    .stripe--gray { background: var(--gray); color: #0a0a0a; box-shadow: 0 12px 40px -12px rgba(140,140,140,.55); }
+    .stripe--ghost { border: 1.5px solid rgba(244,244,244,.35); color: var(--chalk); }
+    .stripe--ghost:hover { border-color: var(--chalk); }
+    .stripe small {
+      display: block; margin-top: 2px; direction: ltr; text-align: right;
+      font-family: var(--race); font-style: italic; font-weight: 600; font-size: 11px;
+      letter-spacing: .12em; text-transform: uppercase; opacity: .85;
+    }
+
+    /* The red + gray pair from above/below the logo */
+    .bars { display: inline-flex; gap: 8px; transform: skewX(var(--skew)); flex: none; }
+    .bars i { display: block; height: 10px; }
+    .bars i:first-child { width: 30px; background: var(--red); }
+    .bars i:last-child  { width: 70px; background: var(--gray); }
+
+    /* ---------- Hero: the artwork, with "COMING SOON" as live text ---------- */
+    .hero { position: relative; height: 100vh; height: 100svh; min-height: 520px; overflow: hidden; background: #000; }
+    /* The stage keeps the artwork's ratio and covers the screen, so the text stays glued to its spot */
+    /* Sizing: cover the screen, but never so big that the logo, the red line and the buttons stop fitting.
+       The artwork's logo starts at ~12% of its height and its red line sits at 78.4%;
+       the stack under the line needs ~190px. */
+    .hero {
+      --W: min(max(100vw, 100svh * 1672 / 941), 2.54 * (100svh - 190px));
+      --H: calc(var(--W) * 941 / 1672);
+      --top: min(calc((100svh - var(--H)) / 2), calc(100svh - 190px - 0.784 * var(--H)));
+    }
+    .stage {
+      position: absolute; left: 50%; top: var(--top); translate: -50% 0;
+      width: var(--W); aspect-ratio: 1672 / 941;
+      container-type: inline-size;
+    }
+    .stage img {
+      display: block; width: 100%; height: 100%; animation: reveal 1.6s ease-out both;
+      /* soft side edges, so a narrower artwork melts into the black */
+      -webkit-mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
+              mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
+    }
+    /* Headline, set in the same type as the branch cards */
+    .soon {
+      position: absolute; left: 0; right: 0; top: 72.6%; translate: 0 -50%;
+      text-align: center; direction: ltr; white-space: nowrap; user-select: none;
+      font-family: var(--race); font-style: italic; font-weight: 900;
+      font-size: max(3.9cqw, 22px); line-height: 1; letter-spacing: .06em;
+      background: linear-gradient(100deg, #9a9a9a 0%, #ffffff 30%, #ffffff 45%, #d9d9d9 55%, #ffffff 70%, #8c8c8c 100%);
+      background-size: 220% 100%; background-position: 100% 0;
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      filter: drop-shadow(0 0 18px rgba(255,255,255,.12));
+      animation: soon-in 1s cubic-bezier(.2,.8,.2,1) .5s both, shine 2.4s ease-in-out 1.5s both;
+    }
+    /* Arabic line + buttons: one stack placed just under the artwork's red line, so nothing can overlap */
+    .hero-meta {
+      position: absolute; z-index: 2; left: 0; right: 0;
+      top: calc(var(--top) + 0.805 * var(--H));
+      display: flex; flex-direction: column; align-items: center; gap: 18px; padding: 0 16px;
+    }
+    .soon-ar {
+      text-align: center; user-select: none;
+      font-family: var(--display-ar); font-size: clamp(20px, 1.9vw, 32px); line-height: 1.2; color: var(--chalk);
+      text-shadow: 0 2px 14px rgba(0,0,0,.9);
+      animation: rise .9s cubic-bezier(.2,.8,.2,1) .9s both;
+    }
+    .soon-ar span { color: var(--red); }
+    @keyframes soon-in { from { opacity: 0; translate: 0 -10%; clip-path: inset(0 100% 0 0); } to { opacity: 1; translate: 0 -50%; clip-path: inset(0 0 0 0); } }
+    @keyframes shine   { from { background-position: 100% 0; } to { background-position: 0 0; } }
+    .hero::after { content: ""; position: absolute; inset: auto 0 0; height: 14%; background: linear-gradient(transparent, var(--black)); pointer-events: none; }
+
+    @media (orientation: portrait) {
+      .hero { display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+      .stage { position: relative; left: auto; top: auto; translate: none; width: 100%; }
+    }
+
+    /* WhatsApp buttons: same stripe buttons as the branch cards */
+    .hero-cta { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px 20px; }
+    @media (orientation: portrait) {
+      .hero-meta { position: static; }
+      .hero-cta { flex-direction: column; align-items: center; }
+    }
+    .hero-cta .stripe { padding: 12px 24px; font-size: 15px; animation: rise .8s cubic-bezier(.2,.8,.2,1) both; }
+    .hero-cta .stripe--ghost { background: rgba(5,5,5,.55); }
+    .hero-cta .stripe:nth-child(1) { animation-delay: 1.2s; }
+    .hero-cta .stripe:nth-child(2) { animation-delay: 1.35s; }
+
+    .scroll-cue {
+      position: absolute; z-index: 2; left: 50%; bottom: 14px; width: 34px; height: 34px; margin-left: -17px;
+      color: var(--dim); animation: bob 2s ease-in-out infinite;
+    }
+    .scroll-cue:hover { color: var(--chalk); }
+
+    @keyframes reveal { from { opacity: 0; transform: scale(1.06); } to { opacity: 1; transform: scale(1); } }
+    @keyframes rise   { from { opacity: 0; translate: 0 24px; } to { opacity: 1; translate: 0 0; } }
+    @keyframes bob    { 0%, 100% { translate: 0 0; } 50% { translate: 0 6px; } }
+    @keyframes letter { from { opacity: 0; transform: translateY(.35em); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
+
+    /* ---------- Branches ---------- */
+    .branches { max-width: 1180px; margin: 0 auto; padding: 72px 16px 48px; }
+    .branches-head { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 18px; margin-bottom: 34px; }
+    .branches-head h2 { font-family: var(--display-ar); font-weight: 400; font-size: clamp(34px, 5vw, 52px); line-height: 1.1; }
+    .branches-head .en { font-family: var(--race); font-style: italic; font-weight: 800; color: var(--gray); letter-spacing: .1em; font-size: 14px; direction: ltr; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); gap: 22px; }
+
+    .branch {
+      position: relative; overflow: hidden; isolation: isolate;
+      background: var(--asphalt); padding: 34px 30px 30px;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 30px 100%, 0 calc(100% - 30px));
+      opacity: 0; translate: 0 30px; transition: opacity .7s ease, translate .7s ease;
+    }
+    .branch.is-in { opacity: 1; translate: 0 0; }
+    .branch::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 4px; background: var(--accent); }
+    .branch--toriel { --accent: var(--red); }
+    .branch--gamaa  { --accent: var(--gray); }
+    .watermark {
+      position: absolute; z-index: -1; bottom: -14px; left: 10px; direction: ltr;
+      font-family: var(--race); font-style: italic; font-weight: 900; font-size: clamp(80px, 12vw, 140px); line-height: 1;
+      color: transparent; -webkit-text-stroke: 1.5px rgba(244,244,244,.08); white-space: nowrap;
+      transition: -webkit-text-stroke-color .4s ease;
+    }
+    .branch:hover .watermark { -webkit-text-stroke-color: rgba(244,244,244,.16); }
+
+    .kicker { font-family: var(--race); font-style: italic; font-weight: 800; font-size: 13px; letter-spacing: .14em; color: var(--accent); }
+    .branch--gamaa .kicker { color: #b5b5b5; }
+    .branch h3 { font-family: var(--display-ar); font-weight: 400; font-size: clamp(38px, 5vw, 54px); line-height: 1.2; margin-top: 4px; }
+    .services { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .services li { list-style: none; font-size: 14px; padding: 5px 12px; border: 1px solid rgba(244,244,244,.14); color: #dcdcdc; }
+    .addr { display: flex; gap: 8px; align-items: flex-start; margin-top: 20px; color: var(--dim); font-size: 15px; line-height: 1.7; }
+    .addr .ico { margin-top: 4px; color: var(--accent); }
+    .phone { display: inline-block; margin-top: 8px; font-family: var(--race); font-style: italic; font-weight: 800; font-size: clamp(26px, 3.4vw, 34px); letter-spacing: .02em; direction: ltr; transition: color .2s; }
+    .branch--toriel .phone:hover { color: var(--red); }
+    .branch--gamaa .phone:hover { color: #c9c9c9; }
+    .actions { display: flex; flex-wrap: wrap; gap: 14px 18px; margin-top: 22px; padding-inline-start: 6px; }
+    .actions .stripe { padding: 12px 24px; font-size: 15px; }
+
+    /* ---------- Footer ---------- */
+    footer { max-width: 1180px; margin: 0 auto; padding: 28px 16px 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; border-top: 1px solid rgba(244,244,244,.08); }
+    footer img { width: 96px; height: auto; display: block; }
+    .social { display: flex; gap: 12px; }
+    .social a { width: 44px; height: 44px; display: grid; place-items: center; border: 1px solid rgba(244,244,244,.2); transform: skewX(var(--skew)); transition: background .2s, border-color .2s; }
+    .social a .ico { transform: skewX(calc(var(--skew) * -1)); }
+    .social a:hover { background: var(--red); border-color: var(--red); }
+    .copy { font-size: 13px; color: #6d6d6d; }
+
+    @media (max-width: 560px) {
+      .hero-cta .stripe { width: min(80vw, 290px); justify-content: center; }
+      .branch { padding: 30px 20px 26px; }
+      footer { flex-direction: column; text-align: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .branch { opacity: 1; translate: none; }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="sr-only">Shiny Garage – حماية وعناية السيارات في المنصورة: أفلام حماية PPF، عزل حراري، Glass Guard وCar Care. الموقع قريبًا.</h1>
+
+  <section class="hero">
+    <div class="stage">
+      <img src="assets/hero-desktop.webp" width="1672" height="941" alt="Shiny Garage – Reflect your passion">
+      <p class="soon">COMING SOON</p>
+    </div>
+
+    <div class="hero-meta">
+      <p class="soon-ar">موقعنا الجديد <span>قريبًا</span></p>
+    <nav class="hero-cta" aria-label="تواصل على واتساب">
+      <a class="stripe stripe--red" href="https://wa.me/201000085431?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20Shiny%20Garage%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D9%81%D8%B1%D8%B9%20%D8%AA%D9%88%D8%B1%D9%8A%D9%84" target="_blank" rel="noopener"><span class="row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>واتساب فرع توريل</span></a>
+      <a class="stripe stripe--ghost" href="https://wa.me/201103248800?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20Shiny%20Garage%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D9%81%D8%B1%D8%B9%20%D8%AD%D9%8A%20%D8%A7%D9%84%D8%AC%D8%A7%D9%85%D8%B9%D8%A9" target="_blank" rel="noopener"><span class="row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>واتساب فرع حي الجامعة</span></a>
+    </nav>
+    </div>
+    <a class="scroll-cue" href="#branches" aria-label="الفروع والعناوين">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+    </a>
+  </section>
+
+  <section class="branches" id="branches" aria-labelledby="branches-title">
+    <div class="branches-head">
+      <span class="bars" aria-hidden="true"><i></i><i></i></span>
+      <h2 id="branches-title">فروعنا في المنصورة</h2>
+      <span class="en">2 BRANCHES · MANSOURA</span>
+    </div>
+
+    <div class="grid">
+      <article class="branch branch--toriel">
+        <span class="watermark" aria-hidden="true">TORIEL</span>
+        <p class="kicker">PROTECTION STUDIO</p>
+        <h3>فرع توريل</h3>
+        <ul class="services"><li>أفلام حماية PPF</li><li>عزل حراري 3M</li><li>Glass Guard</li></ul>
+        <p class="addr"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg><span>توريل، شارع سعد زغلول، برج الحرمين – المنصورة</span></p>
+        <a class="phone" href="tel:+201000085431">0100 008 5431</a>
+        <div class="actions">
+          <a class="stripe stripe--red" href="https://wa.me/201000085431?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20Shiny%20Garage%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D9%81%D8%B1%D8%B9%20%D8%AA%D9%88%D8%B1%D9%8A%D9%84" target="_blank" rel="noopener"><span class="row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>واتساب</span></a>
+          <a class="stripe stripe--ghost" href="https://www.google.com/maps/place/?q=place_id:ChIJh912GQCd9xQRwB3FKimALsA" target="_blank" rel="noopener"><span class="row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>الخريطة</span></a>
+        </div>
+      </article>
+
+      <article class="branch branch--gamaa">
+        <span class="watermark" aria-hidden="true">GAMAA</span>
+        <p class="kicker">CAR CARE &amp; DETAILING</p>
+        <h3>فرع حي الجامعة</h3>
+        <ul class="services"><li>غسيل وCar Care</li><li>تغيير لون الكاليبر</li><li>دهان وإصلاح الجنوط</li><li>سمكرة ودهان</li></ul>
+        <p class="addr"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg><span>45 شارع الخليفة المأمون، متفرع من أحمد ماهر، حي الجامعة – المنصورة</span></p>
+        <a class="phone" href="tel:+201103248800">0110 324 8800</a>
+        <div class="actions">
+          <a class="stripe stripe--gray" href="https://wa.me/201103248800?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20Shiny%20Garage%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D9%81%D8%B1%D8%B9%20%D8%AD%D9%8A%20%D8%A7%D9%84%D8%AC%D8%A7%D9%85%D8%B9%D8%A9" target="_blank" rel="noopener"><span class="row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>واتساب</span></a>
+          <a class="stripe stripe--ghost" href="https://www.google.com/maps/place/?q=place_id:ChIJGdU-d5Gd9xQRnKw5fYZSwGc" target="_blank" rel="noopener"><span class="row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>الخريطة</span></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <footer>
+    <img src="assets/logo.jpg" width="960" height="960" alt="Shiny Garage">
+    <nav class="social" aria-label="السوشيال ميديا">
+      <a href="https://www.facebook.com/shinygarage1" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.25-1.5 1.55-1.5h1.65V4.6c-.29-.04-1.27-.12-2.4-.12-2.38 0-4 1.45-4 4.11v2.3H7.6V14h2.7v8h3.2Z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/shinygarage1/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
+    </nav>
+    <p class="copy"><bdi dir="ltr">© 2026 Shiny Garage</bdi> · المنصورة، مصر</p>
+  </footer>
+
+  <!-- Shared icons -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.1c-.24.68-1.42 1.31-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82s.7-2 .95-2.27c.25-.27.54-.34.72-.34h.52c.17 0 .4-.06.62.48.24.56.8 1.94.86 2.08.07.14.11.3.02.48-.09.18-.14.3-.27.46l-.41.48c-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.6.75 1.87.89.27.14.45.2.52.32.07.11.07.66-.17 1.32Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0Z"/><circle fill="none" stroke="currentColor" stroke-width="2" cx="12" cy="10" r="3"/></symbol>
+  </svg>
+
+  <script>
+    const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+      if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+    }), { threshold: 0.2 });
+    document.querySelectorAll('.branch').forEach((el, i) => { el.style.transitionDelay = (i * 120) + 'ms'; io.observe(el); });
+  </script>
+</body>
+</html>
