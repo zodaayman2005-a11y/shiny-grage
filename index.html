@@ -144,6 +144,7 @@
       width: var(--W); aspect-ratio: 1672 / 941;
       container-type: inline-size;
     }
+    .stage picture { display: block; width: 100%; height: 100%; }
     .stage img {
       display: block; width: 100%; height: 100%; animation: reveal 1.6s ease-out both;
       /* soft side edges, so a narrower artwork melts into the black */
@@ -179,16 +180,24 @@
     @keyframes shine   { from { background-position: 100% 0; } to { background-position: 0 0; } }
     .hero::after { content: ""; position: absolute; inset: auto 0 0; height: 14%; background: linear-gradient(transparent, var(--black)); pointer-events: none; }
 
+    /* Phones: the portrait artwork, full screen. Its "COMING SOON" sits at 63% and its red line at 66.8%;
+       the Arabic line + stacked buttons need ~230px under that line. */
     @media (orientation: portrait) {
-      .hero { display: flex; flex-direction: column; justify-content: center; gap: 28px; }
-      .stage { position: relative; left: auto; top: auto; translate: none; width: 100%; }
+      .hero {
+        --W: min(max(100vw, 100svh * 941 / 1672), 1.5 * (100svh - 230px));
+        --H: calc(var(--W) * 1672 / 941);
+        --top: min(calc((100svh - var(--H)) / 2), calc(100svh - 230px - 0.668 * var(--H)));
+      }
+      .stage { aspect-ratio: 941 / 1672; }
+      .stage img { -webkit-mask-image: none; mask-image: none; }
+      .soon { top: 63.04%; font-size: 8.4cqw; }
+      .hero-meta { top: calc(var(--top) + 0.69 * var(--H)); gap: 16px; }
     }
 
     /* WhatsApp buttons: same stripe buttons as the branch cards */
     .hero-cta { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px 20px; }
     @media (orientation: portrait) {
-      .hero-meta { position: static; }
-      .hero-cta { flex-direction: column; align-items: center; }
+      .hero-cta { flex-direction: column; align-items: center; gap: 12px; }
     }
     .hero-cta .stripe { padding: 12px 24px; font-size: 15px; animation: rise .8s cubic-bezier(.2,.8,.2,1) both; }
     .hero-cta .stripe--ghost { background: rgba(5,5,5,.55); }
@@ -269,7 +278,10 @@
 
   <section class="hero">
     <div class="stage">
-      <img src="assets/hero-desktop.webp" width="1672" height="941" alt="Shiny Garage – Reflect your passion">
+      <picture>
+        <source media="(orientation: portrait)" srcset="assets/hero-mobile.webp" width="941" height="1672">
+        <img src="assets/hero-desktop.webp" width="1672" height="941" alt="Shiny Garage – Reflect your passion">
+      </picture>
       <p class="soon">COMING SOON</p>
     </div>
 
