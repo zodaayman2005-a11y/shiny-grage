@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الصفحة مش موجودة | Shiny Garage</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#050505">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@500;700&family=Lalezar&family=Saira:ital,wght@1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    :root { --black: #050505; --red: #e31e24; --gray: #8c8c8c; --chalk: #f4f4f4; --skew: -14deg; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { background: var(--black); color: var(--chalk); }
+    body {
+      min-height: 100vh; min-height: 100svh; display: grid; place-items: center; text-align: center;
+      padding: 32px 16px; font-family: "IBM Plex Sans Arabic", system-ui, sans-serif;
+      background: radial-gradient(ellipse 60% 45% at 50% 0%, rgba(255,255,255,.08), transparent 70%),
+                  radial-gradient(ellipse 35% 60% at 0% 60%, rgba(227,30,36,.18), transparent 70%),
+                  radial-gradient(ellipse 35% 60% at 100% 60%, rgba(227,30,36,.18), transparent 70%), var(--black);
+    }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible { outline: 2px solid var(--chalk); outline-offset: 4px; }
+    .logo { width: 150px; height: auto; display: block; margin: 0 auto 8px; mix-blend-mode: screen; }
+    .code {
+      font-family: "Saira", sans-serif; font-style: italic; font-weight: 900; font-size: clamp(88px, 22vw, 160px); line-height: 1;
+      background: linear-gradient(100deg, #8c8c8c, #fff 40%, #d9d9d9 60%, #8c8c8c);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .bars { display: inline-flex; gap: 8px; margin: 18px 0 22px; transform: skewX(var(--skew)); }
+    .bars i { display: block; height: 8px; }
+    .bars i:first-child { width: 30px; background: var(--red); }
+    .bars i:last-child { width: 70px; background: var(--gray); }
+    h1 { font-family: "Lalezar", sans-serif; font-weight: 400; font-size: clamp(28px, 6vw, 40px); line-height: 1.3; }
+    p { margin-top: 8px; color: #9b9b9b; font-size: 16px; }
+    .en { direction: ltr; font-family: "Saira", sans-serif; font-style: italic; font-weight: 800; font-size: 13px; letter-spacing: .12em; color: var(--gray); margin-top: 4px; }
+    .stripe {
+      display: inline-flex; align-items: center; margin-top: 28px; padding: 13px 30px;
+      background: var(--red); color: #fff; font-weight: 700; font-size: 16px;
+      transform: skewX(var(--skew)); box-shadow: 0 12px 40px -10px rgba(227,30,36,.8);
+      transition: transform .25s ease, filter .25s ease;
+    }
+    .stripe > span { transform: skewX(calc(var(--skew) * -1)); }
+    .stripe:hover { transform: skewX(var(--skew)) translateY(-3px); filter: brightness(1.1); }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="logo" src="/assets/logo.jpg" width="960" height="960" alt="Shiny Garage">
+    <div class="code" aria-hidden="true">404</div>
+    <span class="bars" aria-hidden="true"><i></i><i></i></span>
+    <h1>الصفحة دي مش موجودة</h1>
+    <p>ممكن يكون اللينك غلط أو الصفحة اتنقلت.</p>
+    <p class="en">PAGE NOT FOUND</p>
+    <a class="stripe" href="/"><span>ارجع للصفحة الرئيسية</span></a>
+  </main>
+</body>
+</html>
